@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  release: 2013-10-16
+  rating: 9.99
+  length: 1
+
+two:
+  name: MyString
+  description: MyText
+  release: 2013-10-16
+  rating: 9.99
+  length: 1
