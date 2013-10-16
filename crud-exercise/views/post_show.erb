@@ -1,0 +1,9 @@
+<a href="/posts/<%= @post["id"] %>"><h2><%= @post["title"] %></h2></a> 
+Time Created: <%= @post["created_at"] %><br/>
+Created by:  <%= @post["author"] %>
+
+<div class="post-body">
+	<img src="<%= @post["image"] %>" width="250"><br/><br/>
+	<%= @post["body"] %><br/>
+
+</div>

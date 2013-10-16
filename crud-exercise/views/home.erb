@@ -1,0 +1,17 @@
+<% @posts.each do |post| %>
+	<a href="/posts/<%= post["id"] %>"><h2><%= post["title"] %></h2></a> 
+
+	<%= post["created_at"] %>
+		<br/>
+		<%= post["body"] %>
+
+	<a href="/posts/<%= post["id"] %>/edit">Edit Post</a>
+	<form action="/posts/<%= post["id"] %>/delete" method="post">
+		<input type="submit" name="delete post" value="delete" />
+	</form>
+<% end %>
+</div>
+
+<br/><br/>
+
+<a href='/posts/new'>New Post</a>

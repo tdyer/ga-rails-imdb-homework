@@ -1,0 +1,9 @@
+<form action="/posts/<%= @post["id"] %>/update" method="post">
+	<div>Title: <input type="text" name="title" value="<%= @post["title"] %>"/></div>
+	<div>Body: <textarea name="body" cols="60" rows="10">
+		<%= @post["body"] %>
+	</textarea></div>
+	<div>Author: <input type="text" name="author" value="<%= @post["author"] %>"/></div>
+	<div>Image URL: <input type="text" name="image" value="<%= @post["image"] %>"/></div>
+	<button type="submit">Update Post</button>
+</form>
