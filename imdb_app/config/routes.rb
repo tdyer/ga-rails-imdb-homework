@@ -1,6 +1,6 @@
 ImdbApp::Application.routes.draw do
   resources :directors do
-    resources :people
+    resources :movies
   end
 
   resources :movies

@@ -7,7 +7,7 @@
 
 <p>
   <strong>Release date:</strong>
-  <%= @movie.release_date %>
+  <%= @movie.release_date.strftime("%A, %B %-d, %Y") %>
 </p>
 
 <p>
@@ -21,8 +21,13 @@
 </p>
 
 <p>
+  <strong>Description:</strong>
+  <%= @movie.description.first(limit = 20) %>
+</p>
+
+<p>
   <strong>Director:</strong>
-  <%= @movie.director.name %>
+  <%= link_to @movie.director.name, director_path(@movie.director) %>
 </p>
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
