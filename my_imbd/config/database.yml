@@ -1,0 +1,22 @@
+
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: my_imbd_development
+  pool: 5
+  
+test:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: my_imbd_test
+  pool: 5
+  
+production:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: my_imbd_production
+  pool: 5
+
