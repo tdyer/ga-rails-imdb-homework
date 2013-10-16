@@ -20,5 +20,10 @@
   <%= @movie.length %>
 </p>
 
+<p>
+  <strong>Director:</strong>
+  <%= @movie.director.name %>
+</p>
+
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>

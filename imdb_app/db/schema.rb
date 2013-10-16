@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20131016212044) do
     t.decimal  "rating"
     t.integer  "length"
     t.string   "description"
+    t.integer  "director_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
