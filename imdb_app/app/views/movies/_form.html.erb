@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+`
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -21,15 +21,15 @@
   </div>
   <div class="field">
     <%= f.label :release_date %><br>
-    <%= f.date_select :release_date %>
+    <%= date_select(:release_date, :start_year.Time.now - 40) %>
   </div>
   <div class="field">
     <%= f.label :rating %><br>
     <%= f.text_field :rating %>
   </div>
   <div class="field">
-    <%= f.label :director %><br>
-    <%= collection_select(:movie, :director_id, Director.all, :id, :name, prompt: true)%>
+    <%= f.label :movie_length %><br>
+    <%= f.text_field :movie_length %>
   </div>
   <div class="actions">
     <%= f.submit %>
