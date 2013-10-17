@@ -1,14 +1,15 @@
-<h1>Movies Index</h1>
-<h1><%= link_to "See Directors Index", directors_path %></h1>
+<div class="first"><h1>Movies Index</h1></div>
+<div class="second"><h1><%= link_to "See Directors Index", directors_path %></h1></div>
 
 <div class="movies">
 <% @movies.each do |movie| %>
-	<h3> <%= movie.name%> </h3>
+	<div class="movie info"><h3> <%= movie.name%> </h3>
 	<%= movie.rating %>
 	<%= link_to movie.name, movie %>
 	<%= movie.description %>
 	<%= link_to "edit movie", edit_movie_path(movie) %>
 	<%= link_to "destroy movie", movie, method: :delete, data:{confirm: "are you sure?"} %>
+	</div>
 	<div class="movie_picture"> <%= image_tag movie.image_url, width: '100' %></div>
 <% end %>
 </div>
