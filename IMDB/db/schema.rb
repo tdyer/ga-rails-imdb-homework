@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20131017010523) do
     t.date     "release_date"
     t.integer  "rating"
     t.integer  "movie_length"
+    t.integer  "director_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

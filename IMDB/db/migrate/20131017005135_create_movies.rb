@@ -5,6 +5,7 @@ class CreateMovies < ActiveRecord::Migration
       t.date :release_date
       t.integer :rating
       t.integer :movie_length
+      t.integer :director_id
 
       t.timestamps
     end

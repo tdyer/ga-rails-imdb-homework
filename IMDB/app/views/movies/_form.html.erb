@@ -27,6 +27,12 @@
     <%= f.label :movie_length %><br>
     <%= f.number_field :movie_length %>
   </div>
+
+ <div class="field">
+    <%= f.label :director %>
+    <%=collection_select(:movie, :director_id, Director.all, :id, :name, prompt: true)%>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

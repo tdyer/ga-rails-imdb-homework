@@ -20,5 +20,8 @@
   <%= @movie.movie_length %>
 </p>
 
+<h3>Movies</h3>
+<%= link_to @movie.director.name, director%>
+
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>
