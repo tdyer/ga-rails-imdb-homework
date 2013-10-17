@@ -12,7 +12,11 @@
 
 <p>
   <strong>Release Date:</strong>
-  <%= @movie.date.strftime("%A, %B %-d, %Y") %>
+  <% if @movie.date.future? %>
+    <%= distance_of_time_in_words(Time.now, @movie.date)%> 
+    until release:
+  <% end %>
+    <%= @movie.date.strftime("%A, %B %-d, %Y") %>
 </p>
 
 <p>
