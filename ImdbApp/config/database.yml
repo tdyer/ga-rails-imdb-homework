@@ -1,0 +1,22 @@
+
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: ImdbApp_development
+  pool: 5
+
+test:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: ImdbApp_test
+  pool: 5
+
+production:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: ImdbApp_production
+  pool: 5
+
