@@ -1,6 +1,7 @@
 class DirectorsController < ApplicationController
   before_action :set_director, only: [:edit, :show, :update, :destroy]
   def new
+    @director = Director.new
   end
 
   def create

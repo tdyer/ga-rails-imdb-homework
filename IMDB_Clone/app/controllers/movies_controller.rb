@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:edit, :show, :update, :destroy]
   def new
+    @movie = Movie.new
   end
 
   def create
