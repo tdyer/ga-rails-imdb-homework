@@ -4,6 +4,8 @@ class CreateDirectors < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.date :dob
+
+      t.timestamps
     end
   end
 end
