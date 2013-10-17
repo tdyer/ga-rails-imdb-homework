@@ -6,5 +6,12 @@
 	<div> <%=@movie.rating%></div>
 	<div> <%=@movie.description %></div>
 	<div> <%=@movie.length %></div>
+	<div class="actors">
+	 <% @movie.actors.each do |actor| %>
+	 <div class="actor">
+	 <%= actor.first_name + " " + actor.last_name %>
+	 </div>
+	 <% end %>
+	 </div>
 </div>
 <%= link_to "back", movies_path %>
