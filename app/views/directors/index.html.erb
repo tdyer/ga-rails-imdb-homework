@@ -1,0 +1,33 @@
+<h1>Directors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>DOB</th>
+      <th>Img</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @directors.each do |director| %>
+      <tr>
+        <td><%= director.name %></td>
+        <td><%= director.description.truncate(20) %></td>
+        <td><%= director.dob.stamp("Thursday, October 17, 2013") %></td>
+        <td><%= image_tag(director.img, width:100) %></td>
+        <td><%= link_to 'Show', director %></td>
+        <td><%= link_to 'Edit', edit_director_path(director) %></td>
+        <td><%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Director', new_director_path %>
