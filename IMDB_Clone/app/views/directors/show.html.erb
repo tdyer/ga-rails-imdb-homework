@@ -5,8 +5,8 @@
 	<div> <%=@director.birthday%></div>
 </div>
 <ul>
-	<% @director.movie.each do |movie| %>
-	<li><%= link_to movie.name %></li>
+	<% @director.movies.each do |movie| %>
+	<li><%= link_to movie.name, movie %></li>
 	<% end %>
 </ul>
 <%= link_to "back", directors_path %>
