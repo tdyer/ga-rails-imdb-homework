@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :release_date %><br>
-    <%= date_select(:release_date, :start_year.Time.now - 40) %>
+    <%= f.date_select :release_date %>
   </div>
   <div class="field">
     <%= f.label :rating %><br>
