@@ -1,7 +1,11 @@
 MyImbd::Application.routes.draw do
-  resources :directors
+resources :movies
 
-  resources :movies
+  resources :directors, only: [:show, :index ] do
+      resources :movies 
+
+    end 
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
