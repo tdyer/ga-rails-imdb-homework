@@ -1,7 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Director.create(name: 'Sofia Coppola', description: 'Oscar-winner and renowned director of moody, visually opulent, candy-color-bright films with discordant music and introspective characters.', birthday: 1971-09-14)
+Director.create(name: 'Nora Ephron', description: '', birthday: yyyy-mm-dd)
+Director.create(name: 'Terrence Malik', description: 'Reclusive and exacting master of emotion-evoking imagery, releases films only one or twice a decade, resides in Austin, Texas, has not yet won an Oscar.', birthday: yyyy-mm-dd)
+Director.create(name: 'David Fincher', description: '', birthday: yyyy-mm-dd)
