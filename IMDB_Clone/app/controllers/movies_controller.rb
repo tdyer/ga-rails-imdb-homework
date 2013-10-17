@@ -26,7 +26,7 @@ class MoviesController < ApplicationController
 
   def update
     if @movie.update(movie_params)
-      redirect_to @movies
+      redirect_to @movie
     else
       render action: 'edit'
     end
