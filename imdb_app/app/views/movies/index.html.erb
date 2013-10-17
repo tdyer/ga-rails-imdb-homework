@@ -19,7 +19,7 @@
       <tr>
         <td><%= movie.name %></td>
         <td><%= movie.description.first(limit = 20) %></td>
-        <td><%= movie.release_date %></td>
+        <td><%= movie.release_date.strftime("%A, %B %-d,%Y") %></td>
         <td><%= movie.rating %></td>
         <td><%= movie.length %></td>
         <td><%= link_to 'Show', movie %></td>

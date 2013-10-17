@@ -12,12 +12,12 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @movie.description.first(limit = 20) %>
+  <%= @movie.description %>
 </p>
 
 <p>
   <strong>Release date:</strong>
-  <%= @movie.release_date %>
+  <%= @movie.release_date.strftime("%A, %B %-d,%Y") %>
 </p>
 
 <p>
