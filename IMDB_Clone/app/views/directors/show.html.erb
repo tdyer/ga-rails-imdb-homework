@@ -1,0 +1,13 @@
+<h1>Director</h1>
+<div class="director">
+	<div class="director_picture"> <%= image_tag @director.image_url, width: '200' %></div>
+	<div> <%=@director.name %></div>
+	<div> <%=@director.description %></div>
+	<div> <%=@director.birthday%></div>
+</div>
+<ul>
+	<% @director.movies.each do |movie| %>
+	<li><%= link_to movie.name, movie %></li>
+	<% end %>
+</ul>
+<%= link_to "back", directors_path %>

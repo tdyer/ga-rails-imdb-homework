@@ -1,0 +1,16 @@
+<div class="movie_form">
+<%= form_for(@movie) do |f| %>
+	<div><%= f.label :name %><%= f.text_field :name %></div>
+	<div><%= f.label :description %><%= f.text_area :description %></div>
+	<div><%= f.label :rating %><%= f.text_field :rating %></div>
+	<div><%= f.label :length %><%= f.time_field :length %></div>
+	<div><%= f.label :release_date %><%= f.date_field :release_date %></div>
+	<div><%= f.label :image_url %><%= f.text_field :image_url %></div>
+
+	<div>
+    <%= f.label :director %><br>
+    <%= collection_select(:movie, :director_id, Director.all, :id, :name, prompt: true)%>
+  </div>
+	<div><%= f.submit %> </div>
+<% end %>
+</div>
