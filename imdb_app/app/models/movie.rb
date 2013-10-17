@@ -4,5 +4,4 @@ class Movie < ActiveRecord::Base
   validates :release_date, presence: true
   validates :length, numericality: { only_integer: true }, numericality: { less_than_or_equal_to: 300}
   validates :rating, presence: true, numericality: { only_float: true }
-  validates_numericality_of :rating, on: :create
 end
