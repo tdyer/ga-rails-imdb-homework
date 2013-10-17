@@ -1,4 +1,4 @@
-<h1>Listing movies</h1>
+<h1>Movies you'll love</h1>
 
 <table>
   <thead>
@@ -8,7 +8,7 @@
       <th>Date</th>
       <th>Rating</th>
       <th>Length</th>
-      <th></th>
+      <th>Director</th>
       <th></th>
       <th></th>
     </tr>
@@ -17,14 +17,15 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-        <td><%= movie.name %></td>
-        <td><%= movie.description %></td>
+        <td><%= link_to movie.name, movie %></td>
+        <td><%= truncate(movie.description, length: 20) %></td>
         <td><%= movie.date %></td>
-        <td><%= movie.rating %></td>
-        <td><%= movie.length %></td>
+        <td><%= movie.rating %> stars</td>
+        <td><%= movie.length %> min</td>
+        <td><%= link_to movie.director.name, movie.director %></td>
         <td><%= link_to 'Show', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
-        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
