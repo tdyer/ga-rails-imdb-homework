@@ -5,6 +5,10 @@
 	<div><%= f.label :rating %><%= f.text_field :rating %></div>
 	<div><%= f.label :length %><%= f.time_field :length %></div>
 	<div><%= f.label :release_date %><%= f.date_field :release_date %></div>
+	<div>
+    <%= f.label :director %><br>
+    <%= collection_select(:movie, :director_id, Director.all, :id, :name, prompt: true)%>
+  </div>
 	<div><%= f.submit %> </div>
 <% end %>
 </div>
