@@ -12,6 +12,6 @@ Movie.create(name: "The Godfather: Part II", description: "The early life and ca
 Movie.create(name: "Pulp Fiction", description: "Girls like me don't make invitations like this to just anyone!", release_date: "1994-10-14", rating: 90, length: 168)
 Movie.create(name: "The Dark Knight", description: "Why so serious?", release_date: "2008-7-18", rating: 90, length: 152)
 Movie.create(name: "The Prestige", description: "A friendship that became a rivalry.", release_date: "2006-10-20", rating: 90, length: 130)
-Movie.create(name: "12 Angry Men", description: "Life is in their hands — death is on their minds!", release_date: "1957-4-4", rating: 89, length: 96 )
+Movie.create(name: "12 Angry Men", description: "Life is in their hands — death is on their minds!", release_date: "1957-4-4", rating: 89, length: 96)
 Movie.create(name: "Schindler's List", description: "Whoever saves one life, saves the world entire.", release_date: "1993-12-15", rating: 89, length: 195)
 Movie.create(name: "Fight Club", description: "How much can you know about yourself if you've never been in a fight?", release_date: "1999-10", rating: 84, length: 139)

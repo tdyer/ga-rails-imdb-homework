@@ -1,10 +1,12 @@
 ImdbApp::Application.routes.draw do
-  resources :directors do
-    resources :movies
-  end
 
   root 'movies#index'
   resources :movies
+  resources :directors
+  # nested routes don't seem to work perfectly
+  # resources :directors, only: [:show, :index] do
+  #   resources :movies
+  # end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
