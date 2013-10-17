@@ -2,7 +2,9 @@ ImdbApp::Application.routes.draw do
 
   root 'movies#index'
   resources :movies
-  resources :directors
+  resources :directors do
+    resources :movies
+  end
   # nested routes don't seem to work perfectly
   # resources :directors, only: [:show, :index] do
   #   resources :movies
