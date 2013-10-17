@@ -11,8 +11,17 @@
 </p>
 
 <p>
-  <strong>Dob:</strong>
-  <%= @director.dob %>
+  <strong>DOB:</strong>
+  <%= @director.dob.stamp("Tuesday, April 16, 2002") %>
+</p>
+
+<p>
+  <strong>Movies:</strong>
+  <ul>
+    <% @director.movies.each do |movie| %>
+      <li><%= link_to movie.name, movie %></li>
+    <% end %>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_director_path(@director) %> |

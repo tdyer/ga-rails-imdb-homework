@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
+# In case of emergency, binding.pry
 gem 'pry-rails'
+
+# For formatting dates/times in human-readable form
+gem 'stamp'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
