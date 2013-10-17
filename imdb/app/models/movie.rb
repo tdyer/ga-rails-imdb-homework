@@ -3,5 +3,6 @@ class Movie < ActiveRecord::Base
 	validates :name, presence: true, length: {minimum: 5}
 	validates :name, length: {maximum: 20}
 	validates :release, presence: true
+	validates :rating, presence: true
 	validates :length, numericality: {less_than_or_equal_to: 300}
 end
