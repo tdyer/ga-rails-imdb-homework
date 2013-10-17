@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  colors: MyString
+  points: 1
+  location: MyString
+  slogan: MyString
+
+two:
+  name: MyString
+  colors: MyString
+  points: 1
+  location: MyString
+  slogan: MyString
