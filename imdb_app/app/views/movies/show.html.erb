@@ -12,7 +12,7 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @movie.description %>
+  <%= @movie.description.first(limit = 20) %>
 </p>
 
 <p>
