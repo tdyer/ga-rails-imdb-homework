@@ -6,8 +6,13 @@ body {
   line-height: 18px;
 }
 
-h1, p, form {
+h1, p, form, li {
   text-align: center;
+  list-style-type: none;
+}
+
+li {
+  margin-left: -40px;
 }
 
 p, ol, ul, td {

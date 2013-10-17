@@ -7,12 +7,12 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @director.description.first(limit = 20) %>
+  <%= @director.description %>
 </p>
 
 <p>
   <strong>Dob:</strong>
-  <%= @director.dob %>
+  <%= @director.dob.strftime("%A, %B %-d,%Y") %>
 </p>
 
 <p>
