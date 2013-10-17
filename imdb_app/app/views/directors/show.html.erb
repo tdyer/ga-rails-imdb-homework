@@ -15,5 +15,14 @@
   <%= @director.dob.strftime("%A, %B %-d, %Y") %>
 </p>
 
+<p>
+  <strong>Movies: </strong>
+  <% @director.movies.each do |movie|%>
+    <ul>
+      <li><%= link_to movie.name, movie %></li>
+    </ul>
+    <% end %>
+</p>
+
 <%= link_to 'Edit', edit_director_path(@director) %> |
 <%= link_to 'Back', directors_path %>
