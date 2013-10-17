@@ -10,10 +10,10 @@ Create a new rails application with the *rails new* command named imdb_app. This
 
 ### Step Two: 
 - Create a resource, *(model, controller,views,.etc)*, for a Movie.
-	- A Movie has a name, description, release date, rating and movie length, *in minutes*.
-	- A Movie *MUST* have a name, release date and rating. And the release date and rating *MUST* be a valid. The movie name *MUST* exist and be between 5 and 20 characters long. The movie length must be less than 300 minutes only if it exists.
+	- A Movie has a name description, release date, rating and movie length, *in minutes*.
+	- A Movie *MUST* have a name release date and rating. And the release date and rating *MUST* be a valid. The movie name *MUST* exist and be between 5 and 20 characters long. The movie length must be less than 300 minutes only if it exists.
 - Create a resource, *(model, controller,views,.etc)*, for an Director.
-	- An Director will have a name, description and date of birth (dob).
+	- An Director will have a name description and date of birth (dob).
 	- An Director *MUST* have a name and dob. The dob *MUST* be a valid date. The name *MUST* be between four and thirty characters.
 - A Movie will have **one** Director.
 - A Director may have many movies.

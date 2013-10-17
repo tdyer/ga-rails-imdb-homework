@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @director.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @director.description %>
+</p>
+
+<p>
+  <strong>DOB:</strong>
+  <%= @director.dob.stamp("Thursday, October 17, 2013") %>
+</p>
+
+<p>
+  <strong>Image:</strong><br /><br />
+  <%= image_tag(@director.img, width:300) %>
+</p>
+
+<p>
+  <strong>Movies:</strong>
+  <ul>
+	  <% @director.movies.each do |movie| %>
+	  	<li><%= link_to movie.name, movie %></li>
+	  <% end %>
+  </ul>
+</p>
+
+<%= link_to 'Edit', edit_director_path(@director) %> |
+<%= link_to 'Back', directors_path %>
