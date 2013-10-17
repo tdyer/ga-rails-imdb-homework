@@ -1,2 +1,9 @@
-<h1>Movie#show</h1>
-<p>Find me in app/views/movie/show.html.erb</p>
+<h1>Movie</h1>
+<div class="movie">
+	<div> <%=@movie.name %></div>
+	<div> <%=@movie.release_date %></div>
+	<div> <%=@movie.rating%></div>
+	<div> <%=@movie.description %></div>
+	<div> <%=@movie.length %></div>
+</div>
+<%= link_to "back", movies_path %>
