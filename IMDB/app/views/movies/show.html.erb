@@ -29,6 +29,15 @@
   <%= @movie.movie_length %>
 </p>
 
+<div class"actors">
+<h3>Actors</h3>
+  <% @movie.actors.each do |actor| %>
+<div class"actor">
+  <%= actor.first_name + " " + actor.last_name%>
+</div>
+<%end%>
+</div>
+
 <h3>Director</h3>
 <% if @movie.director == nil %>
 <%= form_for(@movie) do |f| %>
