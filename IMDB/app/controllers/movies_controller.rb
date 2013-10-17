@@ -4,7 +4,11 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
   def index
+    # if params[:director_id]
+    #   @movie = Movie.where(director_id: params[:director_id])
+    # else
     @movies = Movie.all
+  # end
   end
 
   # GET /movies/1

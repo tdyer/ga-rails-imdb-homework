@@ -23,16 +23,5 @@
 <%end%>
 
 
-<%= form_for(@director.movies.) do |f| %>
-<div class="field">
-    <%= f.label :Add_movie %>
-    <%=collection_select(:movie, :director_id, Movie.all, :id, :name, prompt: true)%>
-  </div>
-   <div class="actions">
-    <%= f.submit %>
-        <%end%>
-  </div>
-
-
 <%= link_to 'Edit', edit_director_path(@director) %> |
 <%= link_to 'Back', directors_path %>
