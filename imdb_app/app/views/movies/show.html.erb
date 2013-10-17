@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @movie.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @movie.description %>
+</p>
+
+<p>
+  <strong>Release Date:</strong>
+  <% if @movie.date.future? %>
+    <%= distance_of_time_in_words(Time.now, @movie.date)%> 
+    until release:
+  <% end %>
+    <%= @movie.date.strftime("%A, %B %-d, %Y") %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @movie.rating %> stars
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @movie.length %> minutes
+</p>
+
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>

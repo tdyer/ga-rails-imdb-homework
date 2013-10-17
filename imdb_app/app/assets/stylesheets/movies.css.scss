@@ -1,0 +1,35 @@
+// Place all the styles related to the Movies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+	text-align: center;
+	background-color: rgba(255, 162, 141, 1.0000);
+}
+
+h1 {
+	color: rgba(127, 81, 70, 1.0000);
+	background-color: rgba(255, 98, 63, 1.0);
+	padding: 20px;
+	text-align: center;
+}
+
+table {
+	background-color: rgba(255, 162, 141, 1.0000);
+	color: rgba(127, 81, 70, 1.0000);
+	text-align: center;
+	}
+
+.new-movie-link, .new-director-link {
+	margin: auto;
+	background-color: rgba(255, 98, 63, 1.0);
+	padding: 20px;
+	font-size: 20px;
+	text-align: center;
+	margin: 5px;
+}
+
+form {
+	background-color: rgba(255, 162, 141, 1.0000);
+	color: rgba(127, 81, 70, 1.0000);
+}

@@ -1,0 +1,37 @@
+<h1>Movies you'll love</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Rating</th>
+      <th>Length</th>
+      <th>Director</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= link_to movie.name, movie %></td>
+        <td><%= truncate(movie.description, length: 20) %></td>
+        <td><%= movie.date.strftime("%A, %B %-d, %Y") %></td>
+        <td><%= movie.rating %> stars</td>
+        <td><%= movie.length %> min</td>
+        <td><%= link_to movie.director.name, movie.director %></td>
+        <td><%= link_to 'Show', movie %></td>
+        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+        <td><%= link_to 'Delete', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div class="new-movie-link"><%= link_to 'Add A New Movie', new_movie_path %></div>
+<div class="new-director-link"><%= link_to "Add a New Director", new_director_path %></div>
