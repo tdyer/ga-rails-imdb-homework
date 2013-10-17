@@ -1,4 +1,4 @@
-class MovieController < ApplicationController
+class MoviesController < ApplicationController
   before_action :set_movie, only: [:edit, :show, :update, :destroy]
   def new
   end
@@ -13,12 +13,13 @@ class MovieController < ApplicationController
   end
 
   def index
+    
     @movies = Movie.all
+
   end
 
   def show
-    @movie = Movie.find(params[:id])
-  end
+    end
 
   def edit
   end
@@ -43,6 +44,6 @@ class MovieController < ApplicationController
   end
 
   def movie_params
-    params.require(:movie), permit(:name, :description, :release_date, :rating, :length)
+    params.require(:movie).permit(:name, :description, :release_date, :rating, :length)
   end
 end

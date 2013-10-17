@@ -1,4 +1,4 @@
-class DirectorController < ApplicationController
+class DirectorsController < ApplicationController
   before_action :set_director, only: [:edit, :show, :update, :destroy]
   def new
   end
@@ -17,7 +17,7 @@ class DirectorController < ApplicationController
   end
 
   def show
-    @director = Director.find(params[:id])
+ 
   end
 
   def edit
@@ -43,6 +43,6 @@ class DirectorController < ApplicationController
   end
 
   def director_params
-    params.require(:director), permit(:name, :description, :birthday)
+    params.require(:director).permit(:name, :description, :birthday)
   end
 end
