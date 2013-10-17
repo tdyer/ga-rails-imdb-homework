@@ -7,6 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Movie.create(name: 'The Parent Trap', description: 'Two girls meet at summer camp, realize they are twins, and plan to reunite their parents.', release_date: '1998-10-02', rating: 5, length: 125)
-
-Director.create(name: 'Alfonso Cuaron', description: 'He\'s a pretty good director,' , dob: '1965-09-06')
+Director.create(name: "Diablo Cody", dob: "1972-12-06", description: "She makes movies like Juno and Jennifer's Body.")
+Director.create(name: "Stanley Kubrick", dob: "1964-10-09" , description: "Born in New York.")
+Director.create(name: "Orson Welles", dob: "1928-05-19", description: "His father was an inventor.")
+Director.create(name: "Francis Ford Coppola", dob: "1936-04-06", description: "Born in Detroit.")
+Director.create(name: "Alfred Hitchcock", dob: "1934-10-15", description: "Grew up Roman Catholic.")
+Movie.create(name: "The Shawshank Redemption", release_date: "1994-05-04", rating: 9, length: 120, description: "Intense", director_id: '2')
+Movie.create(name: "The Dark Knight", release_date: "2008-06-21", rating: 8, length: 150, description: "Oooh Christina Bale", director_id: '1')
+Movie.create(name: "Clueless", release_date: "1995-12-15", rating: 7, length: 124, description: "a classic", director_id: '1')
+Movie.create(name: "Rear Window", release_date: "1954-12-02", rating: 7.9, length:141, description: "So scary!", director_id: '1')
+Movie.create(name: "It's a Wonderful Life", release_date: "1946-10-04", rating: 8, length: 131, description: "so so great!", director_id: '1')

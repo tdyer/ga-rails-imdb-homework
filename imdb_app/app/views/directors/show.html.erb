@@ -7,18 +7,22 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @director.description %>
+  <%= @director.description.first(limit = 20) %>
 </p>
 
 <p>
   <strong>Dob:</strong>
   <%= @director.dob %>
 </p>
-<!-- 
+
 <p>
   <strong>Movies:</strong>
-  <%= @movies.name %>
-</p> -->
+  <ul>
+  <% @director.movies.each do |movie| %>
+  <li><%= link_to movie.name, movie %></li>
+  <% end %>
+  </ul>
+</p>
 
 <%= link_to 'Edit', edit_director_path(@director) %> |
 <%= link_to 'Back', directors_path %>

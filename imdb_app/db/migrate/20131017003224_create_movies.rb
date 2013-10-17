@@ -10,5 +10,8 @@ class CreateMovies < ActiveRecord::Migration
 
       t.timestamps
     end
+
+
+    add_index :movies, :director_id
   end
 end
