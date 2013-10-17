@@ -15,5 +15,15 @@
   <%= @director.dob %>
 </p>
 
+<br/>
+<h3>Movies</h3>
+<p>
+<ul>
+	<% @director.movies.each do |movie| %>
+	<li><%= movie.name %></li>
+	<% end %>
+</ul>
+</p>
+
 <%= link_to 'Edit', edit_director_path(@director) %> |
 <%= link_to 'Back', directors_path %>
