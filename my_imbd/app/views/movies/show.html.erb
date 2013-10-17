@@ -5,9 +5,11 @@
   <%= @movie.name %>
 </p>
 
+<p>Director: <%=link_to @movie.director.d_name, @movie.director%></p>
+
 <p>
   <strong>Description:</strong>
-  <%= @movie.description %>
+  <%= @movie.description.truncate(20) %>
 </p>
 
 <p>

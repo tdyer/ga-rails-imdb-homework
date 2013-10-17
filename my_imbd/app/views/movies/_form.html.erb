@@ -21,9 +21,9 @@
   </div>
   <div>
     <%= f.label :director %> <br>
-    <%= f.text_field :director %>
+    <%= collection_select(:movie, :director_id, Director.all, :id, :d_name, prompt:true) %>
   </div>
-  
+
   <div class="field">
     <%= f.label :release_date %><br>
     <%= f.date_select :release_date %>

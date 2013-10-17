@@ -1,7 +1,7 @@
 MyImbd::Application.routes.draw do
 resources :movies
 
-  resources :directors, only: [:show, :index ] do
+  resources :directors, only: [:show, :index , :create , :destroy , :new , :edit ] do
       resources :movies 
 
     end 
