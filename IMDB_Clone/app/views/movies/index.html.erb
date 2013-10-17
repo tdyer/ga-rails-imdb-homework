@@ -2,6 +2,7 @@
 <div class="movies">
 <% @movies.each do |movie| %>
 	<h3> <%= movie.name%> </h3>
+	<div class="movie_picture"> <%= image_tag movie.image_url, width: '50' %></div>
 	<%= movie.rating %>
 	<%= link_to movie.name, movie %>
 	<%= movie.description %>
