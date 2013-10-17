@@ -30,8 +30,11 @@ ActiveRecord::Schema.define(version: 20131017002844) do
     t.date     "release_date"
     t.integer  "rating"
     t.integer  "length"
+    t.integer  "director_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "movies", ["director_id"], name: "index_movies_on_director_id", using: :btree
 
 end

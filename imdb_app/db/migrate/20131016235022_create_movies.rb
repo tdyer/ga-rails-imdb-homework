@@ -6,8 +6,10 @@ class CreateMovies < ActiveRecord::Migration
       t.date :release_date
       t.integer :rating
       t.integer :length
+      t.belongs_to :director
 
       t.timestamps
     end
+    add_index :movies, :director_id
   end
 end
