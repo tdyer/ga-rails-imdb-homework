@@ -1,0 +1,1 @@
+Date::DATE_FORMATS = Proc.new { |date| date.stamp("Thursday, October 17, 2013")}

@@ -8,6 +8,8 @@ gem 'pg'
 
 gem 'pry-rails'
 
+gem 'stamp'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

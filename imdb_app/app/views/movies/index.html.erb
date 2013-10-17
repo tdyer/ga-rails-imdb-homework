@@ -19,7 +19,7 @@
       <tr>
         <td><%= link_to movie.name, movie %></td>
         <td><%= truncate(movie.description, length: 20) %></td>
-        <td><%= movie.date %></td>
+        <td><%= movie.date.strftime("%A, %B %-d, %Y") %></td>
         <td><%= movie.rating %> stars</td>
         <td><%= movie.length %> min</td>
         <td><%= link_to movie.director.name, movie.director %></td>

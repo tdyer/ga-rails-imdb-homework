@@ -11,8 +11,8 @@
 </p>
 
 <p>
-  <strong>Dob:</strong>
-  <%= @director.dob %>
+  <strong>Born:</strong>
+  <%= @director.dob.strftime("%A, %B %-d, %Y") %>
 </p>
 
 <%= link_to 'Edit', edit_director_path(@director) %> |

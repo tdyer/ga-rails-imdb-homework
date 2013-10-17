@@ -1,4 +1,4 @@
-<h1>Listing directors</h1>
+<h1>Some famous film directors:</h1>
 
 <table>
   <thead>
@@ -17,7 +17,7 @@
       <tr>
         <td><%= director.name %></td>
         <td><%= director.description %></td>
-        <td><%= director.dob %></td>
+        <td><%= director.dob.strftime("%A, %B %-d, %Y") %></td>
         <td><%= link_to 'Show', director %></td>
         <td><%= link_to 'Edit', edit_director_path(director) %></td>
         <td><%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' } %></td>

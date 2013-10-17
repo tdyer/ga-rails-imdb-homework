@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Title:</strong>
   <%= @movie.name %>
 </p>
 
@@ -11,18 +11,18 @@
 </p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @movie.date %>
+  <strong>Release Date:</strong>
+  <%= @movie.date.strftime("%A, %B %-d, %Y") %>
 </p>
 
 <p>
   <strong>Rating:</strong>
-  <%= @movie.rating %>
+  <%= @movie.rating %> stars
 </p>
 
 <p>
   <strong>Length:</strong>
-  <%= @movie.length %>
+  <%= @movie.length %> minutes
 </p>
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
