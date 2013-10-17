@@ -24,12 +24,6 @@
     <%= f.date_select :dob %>
   </div>
 
- <div class="field">
-    <%= f.label :movie %>
-    <%=collection_select(:director, :movie_id, Movie.all, :id, :name, prompt: true)%>
-  </div>
-
-
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -19,8 +19,9 @@
 <%@director.movies.each do |movie|%>
 <ul>
 	<li> <%= link_to movie.name, movie%></li>
-	<%end%>
-</ul>
+	</ul>
+<%end%>
+
 
 <%= link_to 'Edit', edit_director_path(@director) %> |
 <%= link_to 'Back', directors_path %>
