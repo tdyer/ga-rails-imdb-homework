@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @movie.name %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @movie.release_date.strftime("%A, %B %-d, %Y") %>
+</p>
+
+<p>
+  <strong>Countdown:</strong>
+  <%= @days.to_s %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @movie.rating %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @movie.description %>
+</p>
+
+<p>
+  <strong>Movie length:</strong>
+  <%= @movie.movie_length %>
+</p>
+
+<div class"actors">
+<h3>Actors</h3>
+  <% @movie.actors.each do |actor| %>
+<div class"actor">
+  <%= actor.first_name + " " + actor.last_name%>
+</div>
+<%end%>
+</div>
+
+<h3>Director</h3>
+<% if @movie.director == nil %>
+<%= form_for(@movie) do |f| %>
+ <div class="field">
+    <%= f.label :director %>
+    <%=collection_select(:movie, :director_id, Director.all, :id, :name, prompt: true)%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+<% else%>
+
+<h4><%= link_to @movie.director.name, @movie.director%></h4>
+
+<%end%>
+</br>
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>
