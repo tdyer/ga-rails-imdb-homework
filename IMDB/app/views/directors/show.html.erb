@@ -23,7 +23,7 @@
 <%end%>
 
 
-<%= form_for(@director.movies.create) do |f| %>
+<%= form_for(@director.movies.) do |f| %>
 <div class="field">
     <%= f.label :Add_movie %>
     <%=collection_select(:movie, :director_id, Movie.all, :id, :name, prompt: true)%>

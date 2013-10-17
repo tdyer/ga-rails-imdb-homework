@@ -11,12 +11,17 @@
 </p>
 
 <p>
+  <strong>Countdown:</strong>
+  <%= @days.to_s %>
+</p>
+
+<p>
   <strong>Rating:</strong>
   <%= @movie.rating %>
 </p>
 <p>
   <strong>Description:</strong>
-  <%= @movie.description.truncate(20) %>
+  <%= @movie.description %>
 </p>
 
 <p>
@@ -26,8 +31,6 @@
 
 <h3>Director</h3>
 <% if @movie.director == nil %>
-
-
 <%= form_for(@movie) do |f| %>
  <div class="field">
     <%= f.label :director %>
@@ -37,8 +40,6 @@
     <%= f.submit %>
   </div>
 <% end %>
-
-
 <% else%>
 
 <h4><%= link_to @movie.director.name, @movie.director%></h4>

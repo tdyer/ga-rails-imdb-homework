@@ -10,6 +10,11 @@ class MoviesController < ApplicationController
   # GET /movies/1
   # GET /movies/1.json
   def show
+    if Date.parse(@movie.release_date.to_s) > Date.today
+      @days = (Date.parse(@movie.release_date.to_s) - Date.today).to_s + " days"
+    else
+      @days = "Already released"
+    end
   end
 
   # GET /movies/new
