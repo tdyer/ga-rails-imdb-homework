@@ -28,8 +28,8 @@
     <%= f.text_field :rating %>
   </div>
   <div class="field">
-    <%= f.label :movie_length %><br>
-    <%= f.text_field :movie_length %>
+    <%= f.label :director %><br>
+    <%= collection_select(:movie, :director_id, Director.all, :id, :name, prompt: true)%>
   </div>
   <div class="actions">
     <%= f.submit %>
