@@ -1,0 +1,8 @@
+<div class="director_form">
+<div><%= form_for(@director) do |f| %>
+	<div><%= f.label :name %><%= f.text_field :name %></div>
+	<div><%= f.label :description %><%= f.text_area :description %></div>
+	<div><%= f.label :birthday %><%= f.date_field :birthday %></div>
+	<div><%= f.submit %> </div>
+<% end %>
+</div>

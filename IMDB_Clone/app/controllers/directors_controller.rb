@@ -13,7 +13,7 @@ class DirectorsController < ApplicationController
   end
 
   def index
-    @movies = Director.all
+    @directors = Director.all
   end
 
   def show

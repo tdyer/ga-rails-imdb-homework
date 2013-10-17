@@ -2,9 +2,9 @@
 <div class="directors">
 <% @directors.each do |director| %>
 	<h3> <%= director.name%> </h3>
-	<%= director.rating %>
-	<%= link_to director.name, director %>
 	<%= director.description %>
+	<%= link_to director.name, director %>
+	<%= director.birthday %>
 	<%= link_to "edit director", edit_director_path(director) %>
 	<%= link_to "destroy director", director, method: :delete, data:{confirm: "are you sure?"} %>
 <% end %>
