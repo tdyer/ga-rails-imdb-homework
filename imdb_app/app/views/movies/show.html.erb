@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @movie.name %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @movie.release_date.strftime("%A, %B %-d, %Y") %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @movie.rating %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @movie.length %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @movie.description.first(limit = 20) %>
+</p>
+
+<p>
+  <strong>Director:</strong>
+  <%= link_to @movie.director.name, director_path(@movie.director) %>
+</p>
+
+<p>
+  <strong>Actors</strong>
+  <% @movie.actors.each do |actor| %>
+  <%= actor.first_name.to_s + "" + actor.last_name.to_s %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>

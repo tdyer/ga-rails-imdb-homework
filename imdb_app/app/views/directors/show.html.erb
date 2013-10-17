@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @director.name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @director.dob.strftime("%A, %B %-d, %Y") %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @director.description.first(limit = 20) %>
+</p>
+
+<strong>Movies:</strong>
+  <ul>
+  <% @director.movies.each do |movie| %>
+  <li><%= link_to movie.name, movie %></li>
+  <% end %>
+  </ul>
+
+<%= link_to 'Edit', edit_director_path(@director) %> |
+<%= link_to 'Back', directors_path %>
