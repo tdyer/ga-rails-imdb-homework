@@ -19,11 +19,11 @@
     <% @movies.each do |movie| %>
       <tr>
         <td><%= movie.name %></td>
-        <td><%= movie.description %></td>
+        <td><%= truncate(movie.description, length: 20) %></td>
         <td><%= movie.release_date %></td>
         <td><%= movie.rating %></td>
         <td><%= movie.runtime %></td>
-        <td><%= movie.director %></td>
+        <td><%= movie.director.name %></td>
         <td><%= link_to 'Show', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
