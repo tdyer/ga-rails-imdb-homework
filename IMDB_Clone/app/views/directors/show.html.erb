@@ -1,2 +1,9 @@
-<h1>Director#show</h1>
-<p>Find me in app/views/director/show.html.erb</p>
+<h1>Director</h1>
+<div class="director">
+	<div> <%=@director.name %></div>
+	<div> <%=@director.release_date %></div>
+	<div> <%=@director.rating%></div>
+	<div> <%=@director.description %></div>
+	<div> <%=@director.length %></div>
+</div>
+<%= link_to "back", director_path %>
